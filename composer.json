@@ -1,0 +1,31 @@
+{
+    "name": "code-distortion/phpunit-bug",
+    "description": "This repository demonstrates a bug in PHPUnit - Issue #5403",
+    "homepage": "https://github.com/code-distortion/phpunit-bug",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Tim Chandler",
+            "email": "tim@code-distortion.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "8.2.*",
+        "orchestra/testbench": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeDistortion\\PhpUnitBug\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CodeDistortion\\PhpUnitBug\\Tests\\": "tests"
+        }
+    }
+}
