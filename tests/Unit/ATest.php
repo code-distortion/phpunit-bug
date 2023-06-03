@@ -1,15 +1,27 @@
 <?php
 
-namespace CodeDistortion\PhpUnitBug\Tests\PHPUnit;
+namespace CodeDistortion\PhpUnitBug\Tests\Unit;
 
-use Orchestra\Testbench\TestCase as TestCase;
-//use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class ATest extends TestCase
 {
     public static function test_something_a(): void
     {
-        dump('running ATest::test_something_a');
+        set_error_handler([self::class, 'handleError']);
+
+        print "\n\"Running ATest::test_something_a()\"\n";
+
         self::assertTrue(true);
+    }
+
+    public static function handleError(
+        int $errno,
+        string $errstr,
+        string $errfile = '',
+        int $errline = 0,
+        array $errcontext = [],
+    ): void {
+        print "This won't be called";
     }
 }

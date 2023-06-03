@@ -1,15 +1,15 @@
 <?php
 
-namespace CodeDistortion\PhpUnitBug\Tests\PHPUnit;
+namespace CodeDistortion\PhpUnitBug\Tests\Unit;
 
-//use Orchestra\Testbench\TestCase as TestCase;
 use PHPUnit\Framework\TestCase;
 
 class BTest extends TestCase
 {
     public static function test_something_b(): void
     {
-        dump('running BTest::test_something_b');
+        print "\n\"Running BTest::test_something_b()\"\n";
+
         self::assertTrue(true);
     }
 }
